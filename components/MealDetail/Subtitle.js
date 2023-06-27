@@ -14,12 +14,12 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
     fontWeight: "bold",
-    color: "#e2b497",
+    color: "#eee",
 
     textAlign: "center",
   },
   subtitleContainer: {
-    borderBottomColor: "#e2b497",
+    borderBottomColor: "#aa184b",
     borderBottomWidth: 2,
     margin: 4,
     marginHorizontal: 12,

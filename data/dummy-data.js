@@ -2,16 +2,66 @@ import Category from "../models/category";
 import Meal from "../models/meal";
 
 export const CATEGORIES = [
-  new Category("c1", "Italian", "#f5428d"),
-  new Category("c2", "Quick & Easy", "#f54242"),
-  new Category("c3", "Hamburgers", "#f5a442"),
-  new Category("c4", "German", "#f5d142"),
-  new Category("c5", "Light & Lovely", "#368dff"),
-  new Category("c6", "Exotic", "#41d95d"),
-  new Category("c7", "Breakfast", "#9eecff"),
-  new Category("c8", "Asian", "#b9ffb0"),
-  new Category("c9", "French", "#ffc7ff"),
-  new Category("c10", "Summer", "#47fced"),
+  new Category(
+    "c1",
+    "Italian",
+    "#f5428d",
+    "https://www.seriouseats.com/thmb/CpfMCdoSDXTdR6C0KXEiIvM-9Jc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__08__20140818-tomato-sauce-vicky-wasik-3-5a82a74045764203a01410754b129601.jpg"
+  ),
+  new Category(
+    "c2",
+    "Quick & Easy",
+    "#f54242",
+    "https://images.deliveryhero.io/image/fd-tr/Products/29267247.jpg?width=%s"
+  ),
+  new Category(
+    "c3",
+    "Hamburgers",
+    "#f5a442",
+    "https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/master/w_1000,h_684,c_limit/the-ultimate-hamburger.jpg"
+  ),
+  new Category(
+    "c4",
+    "German",
+    "#f5d142",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Breitenlesau_Krug_Br%C3%A4u_Schnitzel.JPG/1200px-Breitenlesau_Krug_Br%C3%A4u_Schnitzel.JPG"
+  ),
+  new Category(
+    "c5",
+    "Light & Lovely",
+    "#368dff",
+    "https://www.southernliving.com/thmb/IkUGEDqjr3A1Jw74Ejx-HfQJ4Tg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2681901_Salad_Grapefruit_and_Avocado_Salad_163-2000-d2635685cc44429b9737e6d3fd320476.jpg"
+  ),
+  new Category(
+    "c6",
+    "Exotic",
+    "#41d95d",
+    "https://cdn.shortpixel.ai/spai/w_977+q_glossy+ret_img+to_webp/https://everyavenuetravel.com/travel/wp-content/uploads/2021/06/fugu-x-c-ar-.jpg"
+  ),
+  new Category(
+    "c7",
+    "Breakfast",
+    "#9eecff",
+    "https://whimsyandspice.com/wp-content/uploads/2022/08/32-Amazing-All-American-Breakfast-Dishes.jpg"
+  ),
+  new Category(
+    "c8",
+    "Asian",
+    "#b9ffb0",
+    "https://www.collinsdictionary.com/images/full/sushi_100783525.jpg"
+  ),
+  new Category(
+    "c9",
+    "French",
+    "#ffc7ff",
+    "https://hips.hearstapps.com/hmg-prod/images/croissants-1647551498.jpeg?crop=1.00xw:0.751xh;0,0.249xh&resize=1200:*"
+  ),
+  new Category(
+    "c10",
+    "Summer",
+    "#47fced",
+    "https://d1f2ieqjc8iqzi.cloudfront.net/s3fs-public/styles/mobile_image_crop_type_image_style/public/2019-02/Summer_Food_Saftey_Blog.png?VersionId=OI0SSr3kHNYfCE3ZiZK5e85CB8tez_qt&itok=qnaXNPsa"
+  ),
 ];
 
 export const MEALS = [

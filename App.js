@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Button } from "react-native";
+import { StyleSheet, Button, ImageBackground, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
@@ -19,14 +19,14 @@ function DrawerNavigator() {
   return (
     <Drawer.Navigator
       screenOptions={{
-        headerStyle: { backgroundColor: "#351401" },
+        headerStyle: { backgroundColor: "#aa184b" },
         headerTintColor: "white",
-        sceneContainerStyle: { backgroundColor: "#3f2f25" },
+        sceneContainerStyle: { backgroundColor: "transparent" },
         headerTitleAlign: "center",
-        drawerContentStyle: { backgroundColor: "#351401" },
+        drawerContentStyle: { backgroundColor: "#aa184b" },
         drawerInactiveTintColor: "white",
-        drawerActiveTintColor: "#351404",
-        drawerActiveBackgroundColor: "#e4baa1",
+        drawerActiveTintColor: "#ffffff",
+        drawerActiveBackgroundColor: "#761e48",
       }}
     >
       <Drawer.Screen
@@ -56,40 +56,57 @@ export default function App() {
     <>
       <StatusBar style="light" />
       {/* <FavoritesContextProvider> */}
-      <Provider store={store}>
-        <NavigationContainer>
-          <Stack.Navigator
-            screenOptions={{
-              headerStyle: { backgroundColor: "#351401" },
-              headerTintColor: "white",
-              contentStyle: { backgroundColor: "#3f2f25" },
-              headerTitleAlign: "center",
-            }}
-          >
-            <Stack.Screen
-              name="Drawer"
-              component={DrawerNavigator}
-              options={{
-                headerShown: false,
+
+      <ImageBackground
+        style={styles.rootScreen}
+        source={require("./assets/bacgroundimages.png")}
+        imageStyle={styles.backgrounImage}
+      >
+        <Provider store={store}>
+          <NavigationContainer>
+            <Stack.Navigator
+              screenOptions={{
+                headerStyle: {
+                  backgroundColor: "#aa184b",
+                },
+                headerTintColor: "white",
+                contentStyle: {
+                  backgroundColor: "transparent",
+                },
+                headerTitleAlign: "center",
               }}
-            />
-            <Stack.Screen
-              name="MealsOverview"
-              component={MealsOverviewScreen}
-            />
-            <Stack.Screen
-              name="MealsDetails"
-              component={MealsDetailsScreen}
-              options={{
-                title: "About the Meal",
-              }}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </Provider>
+            >
+              <Stack.Screen
+                name="Drawer"
+                component={DrawerNavigator}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name="MealsOverview"
+                component={MealsOverviewScreen}
+              />
+              <Stack.Screen
+                name="MealsDetails"
+                component={MealsDetailsScreen}
+                options={{
+                  title: "About the Meal",
+                }}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </Provider>
+      </ImageBackground>
+
       {/* </FavoritesContextProvider> */}
     </>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  rootScreen: { flex: 1 },
+  backgrounImage: {
+    opacity: 0.31,
+  },
+});
