@@ -23,7 +23,7 @@ function DrawerNavigator() {
         headerTitleAlign: "center",
         drawerContentStyle: { backgroundColor: "#351401" },
         drawerInactiveTintColor: "white",
-        drawerActiveTintColor: "#351401",
+        drawerActiveTintColor: "#351402",
         drawerActiveBackgroundColor: "#e4baa1",
       }}
     >
