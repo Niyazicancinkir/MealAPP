@@ -1,21 +1,34 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import {
+  ImageBackground,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import React from "react";
 
 export default function CategoryGridTile({ title, color, onPress, images }) {
+  console.log(images);
   return (
     <View style={styles.gridItem}>
-      <Pressable
-        android_ripple={{ color: "#ccc" }}
-        style={({ pressed }) => [
-          styles.button,
-          pressed ? styles.buttonPressed : null,
-        ]}
-        onPress={onPress}
+      <ImageBackground
+        imageStyle={styles.backgrounImage}
+        style={styles.rootScreen}
+        source={{ uri: images }}
       >
-        <View style={[styles.innerContainer, { backgroundColor: color }]}>
-          <Text style={styles.title}>{title}</Text>
-        </View>
-      </Pressable>
+        <Pressable
+          android_ripple={{ color: "#ccc" }}
+          style={({ pressed }) => [
+            styles.button,
+            pressed ? styles.buttonPressed : null,
+          ]}
+          onPress={onPress}
+        >
+          <View style={[styles.innerContainer]}>
+            <Text style={styles.title}>{title}</Text>
+          </View>
+        </Pressable>
+      </ImageBackground>
     </View>
   );
 }
@@ -25,7 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 16,
     height: 150,
-    borderRadius: 8,
+    borderRadius: 15,
     elevation: 4,
     overflow: "hidden",
   },
@@ -37,5 +50,9 @@ const styles = StyleSheet.create({
   },
   button: { flex: 1 },
   buttonPressed: { opacity: 0.5 },
-  title: { fontWeight: "bold", fontSize: 18 },
+  title: { fontWeight: "bold", fontSize: 20, color: "white" },
+  rootScreen: { flex: 1 },
+  backgrounImage: {
+    opacity: 0.8,
+  },
 });

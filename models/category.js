@@ -3,7 +3,7 @@ class Category {
     this.id = id;
     this.title = title;
     this.color = color;
-    this.images = this.images;
+    this.images = images;
   }
 }
 
