@@ -18,5 +18,5 @@ const styles = StyleSheet.create({
     marginHorizontal: 12,
     backgroundColor: "#aa184b",
   },
-  itemText: { color: "#eee", textAlign: "center" },
+  itemText: { color: "#eee", textAlign: "center", fontSize: 20 },
 });

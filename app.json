@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/cutlery.png",
-    "backgroundColor":"#24180f",
+    "backgroundColor": "#24180f",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/hot-pot.png",
@@ -22,10 +22,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/hot-pot.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.niyazican.YemekTarifleri"
     },
     "web": {
       "favicon": "./assets/cutlery.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5c7fe144-5f0f-44b0-ad9f-71b2bc0c77c3"
+      }
     }
   }
 }

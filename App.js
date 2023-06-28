@@ -21,7 +21,7 @@ function DrawerNavigator() {
       screenOptions={{
         headerStyle: { backgroundColor: "#aa184b" },
         headerTintColor: "white",
-        sceneContainerStyle: { backgroundColor: "transparent" },
+        sceneContainerStyle: { backgroundColor: "#20272F" },
         headerTitleAlign: "center",
         drawerContentStyle: { backgroundColor: "#aa184b" },
         drawerInactiveTintColor: "white",
@@ -57,47 +57,53 @@ export default function App() {
       <StatusBar style="light" />
       {/* <FavoritesContextProvider> */}
 
-      <ImageBackground
+      {/* <ImageBackground
         style={styles.rootScreen}
         source={require("./assets/bacgroundimages.png")}
         imageStyle={styles.backgrounImage}
-      >
-        <Provider store={store}>
-          <NavigationContainer>
-            <Stack.Navigator
-              screenOptions={{
-                headerStyle: {
-                  backgroundColor: "#aa184b",
-                },
-                headerTintColor: "white",
-                contentStyle: {
-                  backgroundColor: "transparent",
-                },
-                headerTitleAlign: "center",
+      > */}
+      <Provider store={store}>
+        <NavigationContainer>
+          {/* <ImageBackground
+            style={styles.rootScreen}
+            source={require("./assets/bacgroundimages.png")}
+            imageStyle={styles.backgrounImage}
+          > */}
+          <Stack.Navigator
+            screenOptions={{
+              headerStyle: {
+                backgroundColor: "#aa184b",
+              },
+              headerTintColor: "white",
+              contentStyle: {
+                backgroundColor: "#20272F",
+              },
+              headerTitleAlign: "center",
+            }}
+          >
+            <Stack.Screen
+              name="Drawer"
+              component={DrawerNavigator}
+              options={{
+                headerShown: false,
               }}
-            >
-              <Stack.Screen
-                name="Drawer"
-                component={DrawerNavigator}
-                options={{
-                  headerShown: false,
-                }}
-              />
-              <Stack.Screen
-                name="MealsOverview"
-                component={MealsOverviewScreen}
-              />
-              <Stack.Screen
-                name="MealsDetails"
-                component={MealsDetailsScreen}
-                options={{
-                  title: "About the Meal",
-                }}
-              />
-            </Stack.Navigator>
-          </NavigationContainer>
-        </Provider>
-      </ImageBackground>
+            />
+            <Stack.Screen
+              name="MealsOverview"
+              component={MealsOverviewScreen}
+            />
+            <Stack.Screen
+              name="MealsDetails"
+              component={MealsDetailsScreen}
+              options={{
+                title: "About the Meal",
+              }}
+            />
+          </Stack.Navigator>
+          {/* </ImageBackground> */}
+        </NavigationContainer>
+      </Provider>
+      {/* </ImageBackground> */}
 
       {/* </FavoritesContextProvider> */}
     </>

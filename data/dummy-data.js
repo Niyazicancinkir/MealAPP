@@ -62,6 +62,12 @@ export const CATEGORIES = [
     "#47fced",
     "https://d1f2ieqjc8iqzi.cloudfront.net/s3fs-public/styles/mobile_image_crop_type_image_style/public/2019-02/Summer_Food_Saftey_Blog.png?VersionId=OI0SSr3kHNYfCE3ZiZK5e85CB8tez_qt&itok=qnaXNPsa"
   ),
+  new Category(
+    "c11",
+    "Turkish",
+    "#47fced",
+    "https://images.unsplash.com/photo-1620167790054-de54f34308bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+  ),
 ];
 
 export const MEALS = [
@@ -378,6 +384,36 @@ export const MEALS = [
       "Halve the tomatoes",
       "Mix with asparagus, salad and dressing",
       "Serve with Baguette",
+    ],
+    true,
+    true,
+    true,
+    true
+  ),
+  new Meal(
+    "m11",
+    ["c11"],
+    "Menemen",
+    "ekonomik",
+    "kolay",
+    "https://www.potelounge.com/asset/poteLounge/img/menemen.jpg",
+    20,
+    [
+      " 2 yemek kaşığı sıvı yağ",
+      "3 adet yeşil biber (Sap ve çekirdekleri temizledikten sonra, ince doğranmış)",
+      "3 orta boy domates",
+      "1/2 (yarım) çay kaşığı tuz",
+      "3 adet yumurta",
+      "İsteğe bağlı: kaşar peyniri küçük bir kasenin yarısı kadar yeterli olur.",
+    ],
+    [
+      "Sıvı yağı ve biberleri tavaya alarak biberlerin rengi dönünceye kadar kavurun.",
+      "Üzerine kabukları soyulup küçük küçük doğranmış domatesleri ilave edin.",
+      "Kısık ocakta tavanın kapağını kapatarak domateslerin iyice pişmesini bekleyin. ",
+      "Domatesler çok suyu değil, tavaya yapışıyorsa birazcık kaynar su ekleyebilirsiniz. Genellikle de bu duruma gerek kalmayacaktır.",
+      "Domatesler piştikten sonra yumurtaları kırabilirsiniz. Yumurtaları ister ayrı bir kapta çırpıp ekleyin isterseniz de benim gibi tavaya kırıp tavada karıştırabilirsiniz.",
+      "Üzerine tuz ve dilediğiniz baharatları ekleyerek yumurtalar pişene kadar bekleyin.",
+      "Kaşar peyniri eklemek istiyorsanız bu aşamada peynirleri de ilave edebilirsiniz. Menemeni sıcak olarak servis yapın.",
     ],
     true,
     true,

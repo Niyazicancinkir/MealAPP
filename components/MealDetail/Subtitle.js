@@ -12,7 +12,7 @@ export default function Subtitle({ children }) {
 const styles = StyleSheet.create({
   subtitle: {
     color: "white",
-    fontSize: 18,
+    fontSize: 30,
     fontWeight: "bold",
     color: "#eee",
 
