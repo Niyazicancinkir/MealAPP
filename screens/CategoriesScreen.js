@@ -13,6 +13,7 @@ export default function CategoriesScreen({ navigation }) {
         title={itemData.item.title}
         color={itemData.item.color}
         onPress={pressHandler}
+        images={itemData.item.images}
       />
     );
   }
