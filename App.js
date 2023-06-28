@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Button } from "react-native";
+import { StyleSheet, Button, ImageBackground, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
@@ -19,14 +19,14 @@ function DrawerNavigator() {
   return (
     <Drawer.Navigator
       screenOptions={{
-        headerStyle: { backgroundColor: "#351401" },
+        headerStyle: { backgroundColor: "#aa184b" },
         headerTintColor: "white",
-        sceneContainerStyle: { backgroundColor: "#3f2f25" },
+        sceneContainerStyle: { backgroundColor: "#20272F" },
         headerTitleAlign: "center",
-        drawerContentStyle: { backgroundColor: "#351401" },
+        drawerContentStyle: { backgroundColor: "#aa184b" },
         drawerInactiveTintColor: "white",
-        drawerActiveTintColor: "#351404",
-        drawerActiveBackgroundColor: "#e4baa1",
+        drawerActiveTintColor: "#ffffff",
+        drawerActiveBackgroundColor: "#761e48",
       }}
     >
       <Drawer.Screen
@@ -56,13 +56,28 @@ export default function App() {
     <>
       <StatusBar style="light" />
       {/* <FavoritesContextProvider> */}
+
+      {/* <ImageBackground
+        style={styles.rootScreen}
+        source={require("./assets/bacgroundimages.png")}
+        imageStyle={styles.backgrounImage}
+      > */}
       <Provider store={store}>
         <NavigationContainer>
+          {/* <ImageBackground
+            style={styles.rootScreen}
+            source={require("./assets/bacgroundimages.png")}
+            imageStyle={styles.backgrounImage}
+          > */}
           <Stack.Navigator
             screenOptions={{
-              headerStyle: { backgroundColor: "#351401" },
+              headerStyle: {
+                backgroundColor: "#aa184b",
+              },
               headerTintColor: "white",
-              contentStyle: { backgroundColor: "#3f2f25" },
+              contentStyle: {
+                backgroundColor: "#20272F",
+              },
               headerTitleAlign: "center",
             }}
           >
@@ -85,11 +100,19 @@ export default function App() {
               }}
             />
           </Stack.Navigator>
+          {/* </ImageBackground> */}
         </NavigationContainer>
       </Provider>
+      {/* </ImageBackground> */}
+
       {/* </FavoritesContextProvider> */}
     </>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  rootScreen: { flex: 1 },
+  backgrounImage: {
+    opacity: 0.31,
+  },
+});
