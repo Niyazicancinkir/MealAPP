@@ -8,7 +8,6 @@ import {
 import React from "react";
 
 export default function CategoryGridTile({ title, color, onPress, images }) {
-  console.log(images);
   return (
     <View style={styles.gridItem}>
       <ImageBackground

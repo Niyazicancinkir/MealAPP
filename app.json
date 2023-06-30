@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "MealAPP",
+    "name": "Yemek Tarifleri",
     "slug": "MealAPP",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/cutlery.png",
+    "icon": "./assets/newicon.png",
     "backgroundColor": "#24180f",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/hot-pot.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#aa184b"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,7 +20,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/cutlery.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.niyazican.MealAPP"

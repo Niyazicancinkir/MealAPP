@@ -55,20 +55,9 @@ export default function App() {
   return (
     <>
       <StatusBar style="light" />
-      {/* <FavoritesContextProvider> */}
 
-      {/* <ImageBackground
-        style={styles.rootScreen}
-        source={require("./assets/bacgroundimages.png")}
-        imageStyle={styles.backgrounImage}
-      > */}
       <Provider store={store}>
         <NavigationContainer>
-          {/* <ImageBackground
-            style={styles.rootScreen}
-            source={require("./assets/bacgroundimages.png")}
-            imageStyle={styles.backgrounImage}
-          > */}
           <Stack.Navigator
             screenOptions={{
               headerStyle: {
@@ -100,12 +89,8 @@ export default function App() {
               }}
             />
           </Stack.Navigator>
-          {/* </ImageBackground> */}
         </NavigationContainer>
       </Provider>
-      {/* </ImageBackground> */}
-
-      {/* </FavoritesContextProvider> */}
     </>
   );
 }
